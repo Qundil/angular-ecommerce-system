@@ -11,6 +11,8 @@ import { ProductDetailsComponent } from './componets/product-details/product-det
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CartStatesComponent } from './componets/cart-states/cart-states.component';
 import { CartDetailsComponent } from './componets/cart-details/cart-details.component';
+import { CheckoutComponent } from './componets/checkout/checkout.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -22,13 +24,15 @@ import { CartDetailsComponent } from './componets/cart-details/cart-details.comp
     SearchComponent,
     ProductDetailsComponent,
     CartStatesComponent,
-    CartDetailsComponent
+    CartDetailsComponent,
+    CheckoutComponent,
+
   ],
   imports: [BrowserModule,
             AppRoutingModule,
             HttpClientModule,
             NgbModule,
-
+            ReactiveFormsModule
           ],
 
   providers: [ProductService],

@@ -3,8 +3,10 @@ import { ProductDetailsComponent } from './componets/product-details/product-det
 import { ProductListComponent } from './componets/product-list/product-list.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CheckoutComponent } from './componets/checkout/checkout.component';
 
 const routes: Routes = [
+  {path: 'checkout', component:CheckoutComponent},
   {path: 'cart-details', component:CartDetailsComponent},
   {path: 'products/:id', component:ProductDetailsComponent},
   {path: 'search/:keyword', component:ProductListComponent},

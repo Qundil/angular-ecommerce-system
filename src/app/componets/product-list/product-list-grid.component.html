@@ -66,7 +66,9 @@
             <div class="price">
               {{ product.unitPrice | currency }}
             </div>
-            <button (click)="addToCart(product)" class="btn btn-primary btn-sm">Add to cart</button>
+            <button (click)="addToCart(product)" class="btn btn-primary btn-sm">
+              Add to cart
+            </button>
           </div>
         </div>
 
@@ -82,39 +84,35 @@
         <!-- begin footer-->
         <div class="footer-pagination">
           <div class="row">
-                <div class="col-md-9 col-sm-9 d-flex " style="padding-left: 30%">
-                  <ngb-pagination
-                    [(page)]="thePageNumber"
-                    [pageSize]="thePageSize"
-                    [collectionSize]="theTotalElements"
-                    [maxSize]="5"
-                    [boundaryLinks]="true"
-                    [rotate]="true"
-                    [ellipses]="false"
-                    (pageChange)="listProducts()"
-                  >
-                  </ngb-pagination>
-                  <div class="my-1">
-                    <span class="">Page Size </span>
+            <div class="col-md-4 col-sm-4 " style="padding-left: 30%">
+              <ngb-pagination
+                [(page)]="thePageNumber"
+                [pageSize]="thePageSize"
+                [collectionSize]="theTotalElements"
+                [maxSize]="5"
+                [boundaryLinks]="true"
+                [rotate]="true"
+                [ellipses]="false"
+                (pageChange)="listProducts()"
+              >
+              </ngb-pagination>
+            </div>
+            <div class="col-md-4 col-sm-4 "></div>
+              <div class="col-md-4 col-sm-4">
 
-                    <select (change)="updatePageSize($event.target.value)">
-                      <option>2</option>
-                      <option selected="true">5</option>
-                      <option>10</option>
-                      <option>20</option>
-                      <option>50</option>
-                    </select>
-                  </div>
-
-                </div>
-
-                <div class="col-md-3 col-sm-9 mt-2">
-
-                </div>
+                <p class="d-flex">page size</p>
+                <select class="form-select form-select-sm" (change)="updatePageSize($event.target.value)">
+                  <option>2</option>
+                  <option selected="true">5</option>
+                  <option>10</option>
+                  <option>20</option>
+                  <option>50</option>
+                </select>
               </div>
 
-          </div>
 
+          </div>
+        </div>
 
         <!-- begin footer-->
       </div>
